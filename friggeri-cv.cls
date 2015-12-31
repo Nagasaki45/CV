@@ -48,14 +48,14 @@
 
 % \RequirePackage[quiet]{fontspec}
 % \RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
-% 
+%
 % \newfontfamily\bodyfont[]{Helvetica Neue}
 % \newfontfamily\thinfont[]{Helvetica Neue UltraLight}
 % \newfontfamily\headingfont[]{Helvetica Neue Condensed Bold}
-% 
+%
 % \defaultfontfeatures{Mapping=tex-text}
 % \setmainfont[Mapping=tex-text, Color=textcolor]{Helvetica Neue Light}
-% 
+%
 % \setmathfont{XITS Math}
 
 %%% modified by Karol Kozioł for ShareLaTex use
@@ -182,7 +182,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
   \renewcommand{\section}[1]{
     \par\vspace{\baselineskip}{\Large\headingfont\color{headercolor} ##1}
   }
-  \begin{textblock}{3.6}(1.5, 4.33)
+  \begin{textblock}{3.1}(1.5, 4.33)
 %   \begin{flushright}
   \obeycr
 }{%
