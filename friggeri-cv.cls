@@ -60,14 +60,14 @@
 
 %%% modified by Karol Kozioł for ShareLaTex use
 \RequirePackage[quiet]{fontspec}
-\RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
+\RequirePackage[math-style=TeX]{unicode-math}
 
 \newfontfamily\bodyfont
 [BoldFont=texgyreheros-bold.otf,
 ItalicFont=texgyreheros-italic.otf,
 BoldItalicFont=texgyreheros-bolditalic.otf]
 {texgyreheros-regular.otf}
-\newfontfamily\thinfont[]{Lato-Hairline.ttf}
+\newfontfamily\thinfont[]{Lato-Light.ttf}
 \newfontfamily\headingfont[]{texgyreheros-bold.otf}
 
 \defaultfontfeatures{Mapping=tex-text}
@@ -141,9 +141,11 @@ BoldItalicFont=texgyreheros-bolditalic.otf
   \par\vspace{\parskip}
 }
 
-\renewcommand{\subsection}[2]{
+\renewcommand{\subsection}[1]{
   \par\vspace{.5\parskip}%
-  \Large\headingfont\color{headercolor} #2%
+  {%
+  \large\headingfont\color{headercolor} #1%
+  }
   \par\vspace{.25\parskip}%
 }
 
@@ -182,12 +184,12 @@ BoldItalicFont=texgyreheros-bolditalic.otf
   \renewcommand{\section}[1]{
     \par\vspace{\baselineskip}{\Large\headingfont\color{headercolor} ##1}
   }
-  \begin{textblock}{3.1}(1.5, 4.33)
-%   \begin{flushright}
+  \begin{textblock}{3.6}(1.5, 4.33)
+  \begin{flushright}
   \obeycr
 }{%
   \restorecr
-%   \end{flushright}
+  \end{flushright}
   \end{textblock}
   \let\section\oldsection
 }
@@ -281,7 +283,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 
 \DeclareNameFormat{author}{%
   \small\addfontfeature{Color=lightgray}%
-  \ifblank{#3}{}{#3\space}#1%
+  \ifblank{##3}{}{##3\space}#1%
   \ifthenelse{\value{listcount}<\value{liststop}}
     {\addcomma\space}
     {}%
