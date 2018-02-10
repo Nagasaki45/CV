@@ -1,41 +1,41 @@
 %!TEX TS-program = xelatex
-\documentclass[]{friggeri-cv}  % Add 'print' as an option into the square bracket to remove colors from this template
+% Add 'print' to the square brackets to remove colors from this template
+\documentclass[]{friggeri-cv}
 
 \begin{document}
 \header{tom}{gurion}
-       {Music / Tech / Interaction}
+       {Non-verbal communication in virtual reality}
+
 
 %-------------------------------------------------------------------------------
-%	SIDEBAR SECTION
+%	SIDEBAR
 %-------------------------------------------------------------------------------
 
 % In the aside, each new line forces a line break
 \begin{aside}
-
 \section{contact}
-
-\href{mailto:nagasaki45@gmail.com}{nagasaki45@gmail.com}
+~
+\href{mailto:t.gurion@qmul.ac.uk}{t.gurion@qmul.ac.uk}
 \href{http://www.tomgurion.me}{www.tomgurion.me}
-\href{https://github.com/Nagasaki45}{github.com/Nagasaki45}
 +44 7397 965017
 London, UK
-
+~
 \section{programming}
-
-\textbf{python:} including django, and parts of the scipy stack
-
-\textbf{elixir:} including phoenix
-
-\textbf{makers tech:} max, pure data (and libpd), arduino, processing
-
-\textbf{web:} javascript, vue.js, jquery, d3, bootstrap, web audio API
-
+~
+\textbf{data analysis:} python and the scipy stack
+~
+\textbf{creative tech:} max, pure data, arduino, processing, unity, blender
+~
+\textbf{server side:} elixir with phoenix or plug, python with django or flask
+~
+\textbf{web:} javascript, vue.js, jquery, bootstrap
+~
 \textbf{tools:} git, docker
-
 \end{aside}
 
+
 %-------------------------------------------------------------------------------
-%	EDUCATION SECTION
+%	EDUCATION
 %-------------------------------------------------------------------------------
 
 \section{education}
@@ -43,42 +43,90 @@ London, UK
 \begin{entrylist}
 
     \entry
-    {2016--today}
-    {Doctor {\normalfont of Media and Arts Technology}}
+    {Since 2016}
+    {PhD in Media and Arts Technology}
     {Queen Mary University of London}
-    {}
+    {
+      \textbf{Thesis title:} Exploring listeners non-verbal cues in multiparty social interactions using virtual reality
+
+      \textbf{Supervisor}: Prof. Patrick Healey
+
+      What do we do as listeners in conversation?
+      How our behaviour affects the conversational flow and turn taking?
+      What are the behavioural differences between addressees and side-participants?
+      This thesis aims to tackle these questions.
+      It uses virtual reality technologies to explore listeners non-verbal cues in multiparty social interactions.
+      Findings from this research can inform new technologies to use socially relevant non-verbal cues in communication.
+      They can be used to implement conversational agents with appropriate listening behaviours.
+      They might also enable hybrid approaches that automatically manipulate some of the behaviours of listeners in VR.
+      These can open new possibilities to enrich the social life of those lacking social skills, or reduce the need to constantly present an undivided attention in mediated conversations.
+
+      \textbf{Activities}
+      \begin{itemize}
+        \item
+          Organising the Virtual Reality special interest group.
+        \item
+          Running data analysis workshops.
+      \end{itemize}
+    }
+
+\end{entrylist}
+\begin{entrylist}
 
     \entry
     {2011--2015}
-    {\href{http://www.tomgurion.me/pdfs/MA.pdf}{Master} {\normalfont of Music Technology}}
+    {\href{http://www.tomgurion.me/pdfs/MA.pdf}{MA} in Music Technology}
     {Bar-Ilan University}
-    {\href{http://www.tomgurion.me/an-audio-only-augmented-reality-system-for-social-interaction.html}{\emph{An Audio-Only Augmented Reality System for Social Interaction}}\\
-    This thesis explores the potential for using modern technologies to create spatial interactive music consumption experiences for non-professional musicians, where the user' social interaction is the main influence over actually heard music.\\
-    Developing \href{https://github.com/Nagasaki45/ScenePlayer-Plus/}{Android applications} and Bluetooth based indoor positioning system as part of the research.\\
-    Courses GPA: 94. Thesis grade: 100.}
+    {
+      \textit{Exceptional distinction (97\%)}
+
+      \textbf{Thesis title:} \href{http://www.tomgurion.me/pdfs/Gurion - An Audio-Only Augmented Reality System for Social Interaction.pdf}{An Audio-Only Augmented Reality System for Social Interaction}
+
+      \textbf{Supervisors:} Prof. Eitan Avitsur and Dr. Nori Jacoby.
+
+      This thesis examines how an interactive environment might facilitate social interaction by developing and evaluating a novel system for joint music consumption by a group of users in the same place and time.
+      The system uses relative locations measured using a Bluetooth signal, and generates an immersive personalized augmented musical environment that depends on the location of its participants.
+      Two experiments tested the system in the context of a silent disco party, using the system's relative position signals as well as video tracking to evaluate the experience of users with and without prior acquaintance.
+      The results showed that for both groups, the system promoted openness and increased the social interaction between users.
+
+      \textbf{Activities}
+      \begin{itemize}
+        \item
+          Organising the weekly seminars of the Music Technology programme.
+      \end{itemize}
+    }
 
 \end{entrylist}
 \begin{entrylist}
 
     \entry
     {2010--2011}
-    {Diploma studies {\normalfont in the Music Technology programme}}
+    {Diploma studies in Music Technology}
     {Bar-Ilan University}
-    {GPA: 97.}
 
 \end{entrylist}
 \begin{entrylist}
 
     \entry
     {2006--2011}
-    {\href{http://www.tomgurion.me/pdfs/BSc.pdf}{Bachelor} {\normalfont of Mathematics and Music}}
+    {\href{http://www.tomgurion.me/pdfs/BSc.pdf}{BSc} in Mathematics and Music}
     {Haifa University}
-    {Undergraduate of the department of mathematics excellence programme. GPA: 90.}
+    {
+      \textbf{Activities}
+      \begin{itemize}
+        \item
+          Participating in the excellence programme of the department of mathematics.
+        \item
+          Taking part in building and maintaining the computer lab of the music department.
+          Working as a recording and mixing engineer in projects by the music and the art departments.
+      \end{itemize}
+    }
 
 \end{entrylist}
 
+
 %-------------------------------------------------------------------------------
-%	WORK EXPERIENCE SECTION
+%	EXPERIENCE
 %-------------------------------------------------------------------------------
 
 \section{experience}
@@ -89,27 +137,11 @@ London, UK
     {2014--2016}
     {Python management server developer}
     {\href{http://xtremio.com/}{XtremIO}}
-    {Working on the management server of an enterprise storage array.
-     Developing automated maintenance procedures such as system upgrades, hardware replacements, restores, migrations, etc..
-     Implementing high-level and interactive communication protocols between clients and server.}
-
-\end{entrylist}
-\begin{entrylist}
-
-    \entry
-    {2014}
-    {Python and Django tutor}
-    {Freelance and with \href{http://www.10x.org.il/}{Udi Oron}}
-    {Trainings for new programmers, in hi-tech companies and for independent developers. Responsible for developing training materials as well as assisting and teaching in class.}
-
-\end{entrylist}
-\begin{entrylist}
-
-    \entry
-    {2014}
-    {Full-stack web developer}
-    {\href{http://www.shachar-web.co.il/}{Shachar web}}
-    {Developing ERP web application with python and django on the server side. html, javascript and jquery on the client side.}
+    {
+      Working on the management server of an enterprise storage array.
+      Developing automated maintenance procedures such as system upgrades, hardware replacements, restores, migrations, etc..
+      Implementing high-level and interactive communication protocols between clients and server.
+    }
 
 \end{entrylist}
 \begin{entrylist}
@@ -118,82 +150,70 @@ London, UK
     {2012--2014}
     {Music cognition research assistant}
     {Freelance}
-    {Generating stimuli, executing music cognition experiments, and analysing experiments data.\\
-    Working with Prof. Zohar Eitan from Tel-Aviv University and Dr. Roni Granot from the Hebrew University.
-    \begin{itemize}
-        \item Generated audio stimuli using Java according to requested mathematical formulas (e.g. Shepard tones).
-        \item Developed GUI application to run music cognition experiments with Python.
-        \item Analysed recorded music using Vamp plug-ins and python packages for audio features extraction.
-    \end{itemize}}
+    {
+      Generating stimuli, executing music cognition experiments, and analysing experiments data.
+
+      Working with Prof. Zohar Eitan from Tel-Aviv University and Dr. Roni Granot from the Hebrew University.
+      \begin{itemize}
+        \item
+          Generated audio stimuli according to requested mathematical formulas (e.g. Shepard tones).
+        \item
+          Developed GUI application to run music cognition experiments with visual stimuli.
+        \item
+          Analysed recorded music using audio features extraction tools.
+      \end{itemize}
+    }
 
 \end{entrylist}
 \begin{entrylist}
 
     \entry
-    {2009--2014}
+    {2014}
+    {Python and Django tutor}
+    {Freelance and with \href{http://www.10x.org.il/}{Udi Oron}}
+    {
+      Teaching programmers in hi-tech companies and independent developers.
+      Developing teaching materials as well as teaching and assisting and class.
+    }
+
+\end{entrylist}
+\begin{entrylist}
+
+    \entry
+    {2014}
+    {Full-stack web developer}
+    {\href{http://www.shachar-web.co.il/}{Shachar web}}
+    {
+      Developing ERP web application with python and django on the server side and html, javascript and jquery on the client side.
+    }
+
+\end{entrylist}
+\begin{entrylist}
+
+    \entry
+    {2009--2013}
     {Math tutor}
     {Freelance and at \href{http://high-q.co.il/}{HighQ}}
-    {Teaching mathematics from junior high to high school including preparation for matriculation exams. Teaching BSc students linear algebra A and B, calculus A and B, discrete mathematics, probability, statistics and more.\\
-    Teaching classes at HighQ toward 4 units matriculation exams.}
+    {
+      Teaching mathematics from junior high to high school including preparation for matriculation exams.
+      Teaching BSc students linear algebra A and B, calculus A and B, discrete mathematics, probability, statistics and more.
+      Teaching classes at HighQ toward 4 units matriculation exams.
+    }
 
 \end{entrylist}
-\begin{entrylist}
 
-    \entry
-    {2010--2014}
-    {Marketing director}
-    {\href{http://www.galilee-bedouin-camplodge.com}{Galilee Bedouin Camplodge}}
-    {Building and maintaining Wordpress (obsolete) and \href{http://www.galilee-bedouin-camplodge.com}{statically generated} business sites.
-    Promoting the business through Israeli and international tourism portals and managing customer relations.}
-
-\end{entrylist}
-\begin{entrylist}
-
-    \entry
-    {2012--2013}
-    {Lecture series organizer}
-    {Bar-Ilan University}
-    {Organizing lectures of invited speakers on the subjects of music technology, electronic music and post-modern and interactive art in the Music and Technology Programme of Bar-Ilan University Music department.}
-
-\end{entrylist}
-\begin{entrylist}
-
-    \entry
-    {2006--2008}
-    {Studio and computer lab assistant}
-    {Haifa University}
-    {Taking part at building the computer lab of the music department and being responsible for functionality of the lab and the studio. Working as a recording and mixing engineer in different projects by the music and the art departments.}
-
-\end{entrylist}
 
 %-------------------------------------------------------------------------------
-%   PUBLICATIONS SECTION
+% PUBLICATIONS
 %-------------------------------------------------------------------------------
 
 \section{publications}
 
-\begin{entrylist}
+Gurion, T. and Jacoby, N. (2013) Audio-Only Augmented Reality System for Social Interaction. In: Stephanidis C. (eds) HCI International 2013 - Posters’ Extended Abstracts. HCI 2013. Communications in Computer and Information Science, vol 373. Springer, Berlin, Heidelberg.
 
-    \entry
-    {2015}
-    {\href{http://www.tomgurion.me/pdfs/Gurion - An Audio-Only Augmented Reality System for Social Interaction.pdf}{An Audio-Only Augmented Reality System for Social Interaction}}
-    {}
-    {Gurion, T., Thesis. Bar-Ilan University Music Department. Ramat Gan, Israel. 2015.}
-
-\end{entrylist}
-
-\begin{entrylist}
-
-    \entry
-    {2013}
-    {\href{http://www.tomgurion.me/pdfs/Gurion and Jacoby - Audio-Only Augmented Reality System for Social Interaction.pdf}{Audio-Only Augmented Reality System for Social Interaction}}
-    {}
-    {Gurion, T. and Jacoby, N., HCI International 2013 -- Posters’ Extended Abstracts. Communications in Computer and Information Science Vol. 373. Springer Berlin Heidelberg, pp. 322–326.}
-
-\end{entrylist}
 
 %-------------------------------------------------------------------------------
-%   CONFERENCE PRESENTATIONS SECTION
+% CONFERENCES
 %-------------------------------------------------------------------------------
 
 \section{conferences}
@@ -201,54 +221,29 @@ London, UK
 \begin{entrylist}
 
     \entry
-    {2016}
-    {\href{https://youtu.be/03c_yQZKopY}{Talk} {\normalfont on the \href{https://github.com/Nagasaki45/krihelinator/}{Krihelinator}}}
-    {PyWebIL #55, Tel-Aviv}
-    {Presenting the motivations for the project, the architecture, and reasons and advantages of choosing elixir.}
+    {2013}
+    {International Symposium on Technology and Society}
+    {Toronto}
+    {\href{http://www.slideshare.net/Nagasaki45/audioonly-augmented-reality-system-for-social-interaction}{Talk}}
 
 \end{entrylist}
 \begin{entrylist}
 
     \entry
     {2013}
-    {\href{http://www.slideshare.net/Nagasaki45/audioonly-augmented-reality-system-for-social-interaction}{Talk} {\normalfont on masters thesis}}
-    {International Symposium on Technology and Society, Toronto}
-    {}
+    {HCI International}
+    {Las Vegas}
+    {\href{http://www.tomgurion.me/pdfs/HCI2013 poster.pdf}{Poster} presentation}
 
 \end{entrylist}
-\begin{entrylist}
 
-    \entry
-    {2013}
-    {\href{http://www.tomgurion.me/pdfs/HCI2013 poster.pdf}{Poster} {\normalfont of masters thesis}}
-    {HCI International, Las Vegas}
-    {}
-
-\end{entrylist}
-\begin{entrylist}
-
-    \entry
-    {2013}
-    {Live demo {\normalfont of \href{http://www.tomgurion.me/musigali.html}{MusiGali}}}
-    {Brain Tech Israel, Tel-Aviv}
-    {Participtnas in the conference were invited to experience an EEG controlled musical environment.}
-
-\end{entrylist}
 
 %-------------------------------------------------------------------------------
-%   AWARDS SECTION
+% AWARDS
 %-------------------------------------------------------------------------------
 
 \section{awards}
 
-\begin{entrylist}
-
-    \entry
-    {2009}
-    {GU8 Consortium Mathematics Contest}
-    {The Global U8 Consortium}
-    {Achieved a \href{http://www.tomgurion.me/pdfs/U8 mathematic contest - silver prize.pdf}{silver prize}.}
-
-\end{entrylist}
+\href{http://www.tomgurion.me/pdfs/U8 mathematic contest - silver prize.pdf}{Silver prize} in The 2009 Global U8 Consortium Mathematics Contest.
 
 \end{document}
