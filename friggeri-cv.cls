@@ -172,6 +172,20 @@ BoldItalicFont=texgyreheros-bolditalic.otf
   }\\}
 
 
+%%%%%%%%%%%%%%%%%%%%
+% Publication item %
+%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\bfseries}{\headingfont\color{headercolor}}
+\newcommand{\publication}[2]{%
+  &\parbox[t]{\textwidth}{%
+    #1%
+    \hfill%
+    {\footnotesize\addfontfeature{Color=lightgray} #2}\\
+  }
+}
+
+
 %%%%%%%%%%%%%%
 % Side block %
 %%%%%%%%%%%%%%
