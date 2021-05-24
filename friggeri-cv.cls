@@ -200,9 +200,11 @@ BoldItalicFont=texgyreheros-bolditalic.otf
   }
   \begin{textblock}{3.6}(1.5, 4.33)
   \begin{flushright}
+  \begin{small}
   \obeycr
 }{%
   \restorecr
+  \end{small}
   \end{flushright}
   \end{textblock}
   \let\section\oldsection
