@@ -192,7 +192,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 
 \RequirePackage[absolute,overlay]{textpos}
 \setlength{\TPHorizModule}{1cm}
-\setlength{\TPVertModule}{1cm}
+\setlength{\TPVertModule}{0.9cm}
 \newenvironment{aside}{%
   \let\oldsection\section
   \renewcommand{\section}[1]{
