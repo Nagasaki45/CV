@@ -107,7 +107,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
     };
   \end{tikzpicture}
   \vspace{2.5cm}
-  \vspace{-2\parskip}
+  % \vspace{-2\parskip}
 }
 
 
@@ -168,7 +168,9 @@ BoldItalicFont=texgyreheros-bolditalic.otf
     \textbf{#2}%
     \hfill%
     {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
-    #4\vspace{\parsep}%
+    #4%
+
+    \vspace{2\parsep}%
   }\\}
 
 
@@ -192,7 +194,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 
 \RequirePackage[absolute,overlay]{textpos}
 \setlength{\TPHorizModule}{1cm}
-\setlength{\TPVertModule}{0.9cm}
+\setlength{\TPVertModule}{1cm}
 \newenvironment{aside}{%
   \let\oldsection\section
   \renewcommand{\section}[1]{
