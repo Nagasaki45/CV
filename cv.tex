@@ -1,199 +1,303 @@
 %!TEX TS-program = xelatex
-% Add 'print' to the square brackets to remove colors from this template
-\documentclass[]{friggeri-cv}
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
 
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-orange}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+% \photo[circle,edge,right]{./profile.png}
+\name{Tom}{Leverstone}
+\position{Senior Software Engineer}
+% \address{London}
+
+\mobile{07397965017}
+\email{tleverstone@gmail.com}
+\homepage{leverstone.me}
+\github{nagasaki45}
+\linkedin{tleverstone}
+% \gitlab{your-gitlab}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \medium{medium-id}
+% \googlescholar{googlescholar-id}{name-to-display}
+
+% \quote{``A witty and insightful quote" - Someone}
+
+%-------------------------------------------------------------------------------
 \begin{document}
-\header{Tom}{Leverstone}
-       {Senior Software Engineer}
 
+% Print the header with above personal information
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[C]
 
-%-------------------------------------------------------------------------------
-%	SIDEBAR
-%-------------------------------------------------------------------------------
-
-% In the aside, each new line forces a line break
-\begin{aside}
-\section{Contact}
-~
-\href{mailto:tleverstone@gmail.com}{tleverstone@gmail.com}
-\href{http://leverstone.me}{leverstone.me}
-\href{https://github.com/nagasaki45}{github.com/nagasaki45}
-07397965017
-London
-~
-\section{Skills}
-~
-Team player
-~
-Self learner
-~
-Strive for quality
-~
-Attention to details
-~
-Teaching and mentoring
-~
-\textbf{Backend:} Python with Django or FastAPI
-~
-\textbf{AI:} Retrieval-Augmented Generation with LangChain
-~
-\textbf{Frontend:} React.js, Next.js, and TypeScript
-~
-\textbf{Tools:} Linux, Git, and Docker
-~
-\end{aside}
-
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {\today}
+  {Tom Leverstone~~~·~~~CV}
+  {\thepage}
 
 %-------------------------------------------------------------------------------
-%	EXPERIENCE
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
 
-\section{Experience}
-
-\begin{entrylist}
-
-  \entry
-  {Since 2024}
-  {Senior Software Engineer}
-  {\href{https://www.mintel.com/}{Mintel} / Full-time}
-  {
-    Designing and leading the development of a backend service for an AI-powered question-and-answer system.
-    This Retrieval-Augmented Generation service consolidated logic that previously lived in a frontend application and a thread-based Django server, to an asynchronous FastAPI server, significantly improving the system's load-handling capacity, decoupling the frontend from the backend, and facilitating the implementation of new features.
-    In addition, addressing critical bottlenecks in data preparation and indexing, reducing processing time for ingesting our entire dataset from three to one hour, while improving the process robustness.
-  }
-
-  \entry
-  {2021-2023}
-  {Software Engineer}
-  {\href{https://www.mintel.com/}{Mintel} / Full-time}
-  {
-    Working full-stack on a web app that allows clients to search and read content written by Mintel's market research analysts. Taking active part in all team activities of an established Scrum team.
-    Leading the development of a Single Page App for long-form content consumption written in React, including backend API development in Django.
-    Advocating for high code quality by improving the team documentation, test suites, and alerting system (Sentry).
-    Collaborating autonomously with adjacent teams, including contributing code to accelerate the development of features and bug fixes for the teams' dependencies.
-  }
-
-  \entry
-  {2020-2021}
-  {Full-stack Developer}
-  {\href{https://qmul.ac.uk/}{Queen Mary University of London} / Part-time}
-  {
-    Migrating the wordpress website of the \href{https://mat.qmul.ac.uk/}{Media and Arts Technology centre} to Gatsby.js, hosted on GitHub pages, with continuous delivery by travis-ci.
-  }
-
-  \entry
-  {2014-2016}
-  {Python Back-end Developer}
-  {\href{http://xtremio.com/}{XtremIO} / Full-time}
-  {
-    Working on the management server of an enterprise storage array.
-    Developing automated maintenance procedures such as system upgrades, hardware replacements, restores, migrations, etc.
-    Designing and implementing high-level and interactive protocols for client-server communication.
-  }
-
-  \entry
-  {2014}
-  {Python and Django tutor}
-  {Freelance and with \href{http://www.10x.org.il/}{Udi Oron} / Part-time}
-  {
-    Teaching programmers in tech companies and privately.
-    Developing teaching materials as well as teaching and assisting in class.
-  }
-
-  \entry
-  {2014}
-  {Full-stack Developer}
-  {\href{http://www.shachar-web.co.il/eng/}{Shachar Web Solutions} / Part-time}
-  {
-    Developing an enterprise resource planning system with Django and jQuery.
-  }
-
-  \entry
-  {2009-2013}
-  {Math tutor}
-  {Freelance and at \href{https://www.high-q.co.il/}{HighQ retake college} / Part-time}
-  {
-    Teaching mathematics to 7th-12th grade students including preparation for matriculation exams (Israeli equivalent to A level) both privately and at a retake college.
-    Teaching BSc students Linear Algebra, Calculus, Discrete Mathematics, Probability, Statistics and more at undergraduate level.
-  }
-
-\end{entrylist}
-
-\clearpage
+%-------------------------------------------------------------------------------
+%	SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection{Skills}
 
 %-------------------------------------------------------------------------------
-%	EDUCATION
+%	CONTENT
 %-------------------------------------------------------------------------------
+\begin{cvskills}
+%---------------------------------------------------------
+  \cvskill
+    {Soft Skills} % Category
+    {Team player, Self learner, Strive for quality, Attention to details, Teaching and mentoring} % Skills
 
-\section{Education}
+%---------------------------------------------------------
+  \cvskill
+    {Backend} % Category
+    {Python with Django or FastAPI} % Skills
 
-\begin{entrylist}
+%---------------------------------------------------------
+  \cvskill
+    {AI} % Category
+    {Retrieval-Augmented Generation with LangChain} % Skills
 
-  \entry
-  {2016-2021}
-  {PhD in Computer Science}
-  {Queen Mary University of London}
-  {
-    \textbf{Thesis title:} Head movement in conversation
+%---------------------------------------------------------
+  \cvskill
+    {Frontend} % Category
+    {React.js, Next.js, and TypeScript} % Skills
 
-    \textbf{Supervisors}: Prof. Patrick Healey and Dr. Julian Hough
+%---------------------------------------------------------
+  \cvskill
+    {Tools} % Category
+    {Linux, Git, and Docker} % Skills
 
-    This PhD explores the function and form of head movement and specifically head nods in free conversation.
-    It utilizes virtual reality and motion capture data analysis to explore listeners non-verbal cues in multiparty social interactions.
-    Overall, this thesis questions the coherence of our intuitive notion of a head nod and the adequacy of current approaches to describe the movements involved.
-    It shows how some of the common theories that describe head movement and nods fail to explain most head movement in free conversation.
-    In addition, it highlights subtleties in head movement and nods that are often overlooked.
+%---------------------------------------------------------
+\end{cvskills}
 
-    \textbf{Activities}
-    \begin{itemize}
-      \item
-        Designing and running software skills workshops: Intro to Code with Python/Processing, Data Analysis with Python and Pandas, and Version Control with Git.
-      \item
-        Teaching assistance for ``Interactive Digital Multimedia Techniques'', ``Parallel Computing'', and ``Arts Application Programming'' modules.
-      \item
-        Organising the Virtual Reality Special Interest Group.
-    \end{itemize}
-  }
+%-------------------------------------------------------------------------------
+%	SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection{Experience}
 
-  \entry
-  {2011-2015}
-  {\href{http://www.tomgurion.me/pdfs/MA.pdf}{MA} in Music Technology}
-  {Bar-Ilan University}
-  {
-    \textit{Exceptional distinction (97\%)}
+%-------------------------------------------------------------------------------
+%	CONTENT
+%-------------------------------------------------------------------------------
+\begin{cventries}
 
-    \textbf{Thesis title:} \href{http://www.tomgurion.me/pdfs/Gurion - An Audio-Only Augmented Reality System for Social Interaction.pdf}{An Audio-Only Augmented Reality System for Social Interaction}
+%---------------------------------------------------------
+  \cventry
+    {Senior Software Engineer} % Job title
+    {Mintel} % Organization
+    {London} % Location
+    {Since 2024} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Designing and leading the development of a backend service for an AI-powered question-and-answer system.}
+        \item {This Retrieval-Augmented Generation service consolidated logic that previously lived in a frontend application and a thread-based Django server, to an asynchronous FastAPI server, significantly improving the system's load-handling capacity, decoupling the frontend from the backend, and facilitating the implementation of new features.}
+        \item {Addressing critical bottlenecks in data preparation and indexing, reducing processing time for ingesting our entire dataset from three to one hour, while improving the process robustness.}
+      \end{cvitems}
+    }
 
-    \textbf{Supervisors:} Prof. Eitan Avitsur and Dr. Nori Jacoby.
+%---------------------------------------------------------
+  \cventry
+    {Software Engineer} % Job title
+    {Mintel} % Organization
+    {London} % Location
+    {2021 - 2023} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Working full-stack on a web app that allows clients to search and read content written by Mintel's market research analysts. Taking active part in all team activities of an established Scrum team.}
+        \item {Leading the development of a Single Page App for long-form content consumption written in React, including backend API development in Django.}
+        \item {Advocating for high code quality by improving the team documentation, test suites, and alerting system (Sentry).}
+        \item {Collaborating autonomously with adjacent teams, including contributing code to accelerate the development of features and bug fixes for the teams' dependencies.}
+      \end{cvitems}
+    }
 
-    This thesis examines how an interactive environment might facilitate social interaction by developing and evaluating a mobile app for joint music consumption by a group of users in the same place and time.
-    The app measure relative distances from a set of beacons via Bluetooth, and generates an immersive personalised musical environment that depends on the location of its participants.
-    Two experiments tested the system in the context of a silent disco party, using the system's relative position signals as well as video tracking to evaluate the experience of users.
-    The results showed that the system promoted openness and increased the social interaction between users.
+%---------------------------------------------------------
+  \cventry
+    {Full-stack Developer} % Job title
+    {Queen Mary University of London} % Organization
+    {London} % Location
+    {2020 - 2021} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Migrating the wordpress website of the Media and Arts Technology centre to Gatsby.js, hosted on GitHub pages, with continuous delivery by travis-ci.}
+      \end{cvitems}
+    }
 
-    \textbf{Activities}
-    \begin{itemize}
-      \item
-        Organising the weekly seminars of the Music Technology programme.
-    \end{itemize}
-  }
+%---------------------------------------------------------
+  \cventry
+    {Python Back-end Developer} % Job title
+    {XtremIO} % Organization
+    {Israel} % Location
+    {2014 - 2016} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Working on the management server of an enterprise storage array.}
+        \item {Developing automated maintenance procedures such as system upgrades, hardware replacements, restores, migrations, etc.}
+        \item {Designing and implementing high-level and interactive protocols for client-server communication.}
+      \end{cvitems}
+    }
 
-  \entry
-  {2006-2011}
-  {\href{http://www.tomgurion.me/pdfs/BSc.pdf}{BSc} in Mathematics and Music}
-  {Haifa University}
-  {
-    \textbf{Activities}
-    \begin{itemize}
-      \item
-        Participating in the excellence programme of the department of mathematics.
-      \item
-        Taking part in establishing and maintaining the computer lab of the music department.
-      \item
-        Working as a recording and mixing engineer in the music department recording studio.
-    \end{itemize}
-  }
+%---------------------------------------------------------
+  \cventry
+    {Python and Django tutor} % Job title
+    {Freelance and with Udi Oron} % Organization
+    {Israel} % Location
+    {2014} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Teaching programmers in tech companies and privately.}
+        \item {Developing teaching materials as well as teaching and assisting in class.}
+      \end{cvitems}
+    }
 
-\end{entrylist}
+%---------------------------------------------------------
+  \cventry
+    {Full-stack Developer} % Job title
+    {Shachar Web Solutions} % Organization
+    {Israel} % Location
+    {2014} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Developing an enterprise resource planning system with Django and jQuery.}
+      \end{cvitems}
+    }
 
+%---------------------------------------------------------
+  \cventry
+    {Math tutor} % Job title
+    {Freelance and at HighQ retake college} % Organization
+    {Israel} % Location
+    {2009 - 2013} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Teaching mathematics to 7th-12th grade students including preparation for matriculation exams (Israeli equivalent to A level) both privately and at a retake college.}
+        \item {Teaching BSc students Linear Algebra, Calculus, Discrete Mathematics, Probability, Statistics and more at undergraduate level.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+\end{cventries}
+
+%-------------------------------------------------------------------------------
+%	SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection{Education}
+
+%-------------------------------------------------------------------------------
+%	CONTENT
+%-------------------------------------------------------------------------------
+\begin{cventries}
+
+%---------------------------------------------------------
+  \cventry
+    {PhD in Computer Science} % Degree
+    {Queen Mary University of London} % Institution
+    {London} % Location
+    {2016 - 2021} % Date(s)
+    {
+      \begin{cvitems} % Description(s) bullet points
+        \item {\textbf{Thesis title:} Head movement in conversation}
+        \item {\textbf{Supervisors:} Prof. Patrick Healey and Dr. Julian Hough}
+        \item {This PhD explores the function and form of head movement and specifically head nods in free conversation.}
+        \item {It utilizes virtual reality and motion capture data analysis to explore listeners non-verbal cues in multiparty social interactions.}
+        \item {Overall, this thesis questions the coherence of our intuitive notion of a head nod and the adequacy of current approaches to describe the movements involved.}
+        \item {It shows how some of the common theories that describe head movement and nods fail to explain most head movement in free conversation.}
+        \item {In addition, it highlights subtleties in head movement and nods that are often overlooked.}
+        \item {\textbf{Activities:}}
+        \item {Designing and running software skills workshops: Intro to Code with Python/Processing, Data Analysis with Python and Pandas, and Version Control with Git.}
+        \item {Teaching assistance for ``Interactive Digital Multimedia Techniques'', ``Parallel Computing'', and ``Arts Application Programming'' modules.}
+        \item {Organising the Virtual Reality Special Interest Group.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {MA in Music Technology} % Degree
+    {Bar-Ilan University} % Institution
+    {Israel} % Location
+    {2011 - 2015} % Date(s)
+    {
+      \begin{cvitems} % Description(s) bullet points
+        \item {\textit{Exceptional distinction (97\%)}}
+        \item {\textbf{Thesis title:} An Audio-Only Augmented Reality System for Social Interaction}
+        \item {\textbf{Supervisors:} Prof. Eitan Avitsur and Dr. Nori Jacoby.}
+        \item {This thesis examines how an interactive environment might facilitate social interaction by developing and evaluating a mobile app for joint music consumption by a group of users in the same place and time.}
+        \item {The app measure relative distances from a set of beacons via Bluetooth, and generates an immersive personalised musical environment that depends on the location of its participants.}
+        \item {Two experiments tested the system in the context of a silent disco party, using the system's relative position signals as well as video tracking to evaluate the experience of users.}
+        \item {The results showed that the system promoted openness and increased the social interaction between users.}
+        \item {\textbf{Activities:}}
+        \item {Organising the weekly seminars of the Music Technology programme.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {BSc in Mathematics and Music} % Degree
+    {Haifa University} % Institution
+    {Israel} % Location
+    {2006 - 2011} % Date(s)
+    {
+      \begin{cvitems} % Description(s) bullet points
+        \item {\textbf{Activities:}}
+        \item {Participating in the excellence programme of the department of mathematics.}
+        \item {Taking part in establishing and maintaining the computer lab of the music department.}
+        \item {Working as a recording and mixing engineer in the music department recording studio.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+\end{cventries}
+
+%-------------------------------------------------------------------------------
 \end{document}
