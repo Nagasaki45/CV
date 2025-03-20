@@ -20,7 +20,7 @@
 \documentclass[11pt, a4paper]{awesome-cv}
 
 % Configure page margins with geometry
-\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+% \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=.8cm}
 
 % Color for highlights
 % Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
@@ -41,6 +41,9 @@
 
 % If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+% Set colour for hyperlinks (\href)
+\hypersetup{colorlinks,urlcolor=awesome-orange}
 
 %-------------------------------------------------------------------------------
 %	PERSONAL INFORMATION
@@ -68,6 +71,7 @@
 % \quote{``A witty and insightful quote" - Someone}
 
 %-------------------------------------------------------------------------------
+
 \begin{document}
 
 % Print the header with above personal information
@@ -76,228 +80,158 @@
 
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
-\makecvfooter
-  {\today}
-  {Tom Leverstone~~~·~~~CV}
-  {\thepage}
+% \makecvfooter
+%   {\today}
+%   {Tom Leverstone~~~·~~~CV}
+%   {\thepage}
 
 %-------------------------------------------------------------------------------
-%	CV/RESUME CONTENT
-%	Each section is imported separately, open each file in turn to modify content
-%-------------------------------------------------------------------------------
+
+\cvsection{Summary}
+
+\begin{cvparagraph}
+  I'm a Senior Software Engineer eager to make a significant impact and seeking my next challenge, ideally in a role where I can grow as a technical leader. I've consistently developed and implemented strategic solutions aligned with business objectives, from launching an AI-powered Q\&A product in weeks to improving system performance and reducing cloud costs. I thrive in environments where I can own projects from inception to completion, collaborate across teams, and delight users. I'm excited to find a role that supports work-life balance, offers opportunities to mentor others, and values expanding my technical breadth through hands-on contribution.
+\end{cvparagraph}
 
 %-------------------------------------------------------------------------------
-%	SECTION TITLE
-%-------------------------------------------------------------------------------
+
 \cvsection{Skills}
 
-%-------------------------------------------------------------------------------
-%	CONTENT
-%-------------------------------------------------------------------------------
 \begin{cvskills}
-%---------------------------------------------------------
-  \cvskill
-    {Soft Skills} % Category
-    {Team player, Self learner, Strive for quality, Attention to details, Teaching and mentoring} % Skills
 
-%---------------------------------------------------------
   \cvskill
-    {Backend} % Category
-    {Python with Django or FastAPI} % Skills
+    {Languages}
+    {Python, JavaScript, TypeScript}
 
-%---------------------------------------------------------
   \cvskill
-    {AI} % Category
-    {Retrieval-Augmented Generation with LangChain} % Skills
+    {Backend}
+    {FastAPI, Django, Flask}
 
-%---------------------------------------------------------
   \cvskill
-    {Frontend} % Category
-    {React.js, Next.js, and TypeScript} % Skills
+    {Frontend}
+    {React.js, Next.js}
 
-%---------------------------------------------------------
   \cvskill
-    {Tools} % Category
-    {Linux, Git, and Docker} % Skills
+    {AI}
+    {Retrieval-Augmented Generation, Evaluation of AI Applications, LLM-as-a-Judge}
 
-%---------------------------------------------------------
+  \cvskill
+    {Databases}
+    {MariaDB, Solr, Milvus}
+
+  \cvskill
+    {Cloud}
+    {AWS (S3, EC2, RDS, Elastic Beanstalk), DigitalOcean (Droplets, AppPlatform), Heroku/Dokku}
+
+  \cvskill
+    {CI/CD}
+    {GitLab CI, GitHub Actions, TravisCI}
+
+  \cvskill
+    {Other}
+    {Git and GitHub/GitLab, Docker and Docker Compose, Linux}
+
 \end{cvskills}
 
 %-------------------------------------------------------------------------------
-%	SECTION TITLE
-%-------------------------------------------------------------------------------
+
 \cvsection{Experience}
 
-%-------------------------------------------------------------------------------
-%	CONTENT
-%-------------------------------------------------------------------------------
 \begin{cventries}
 
-%---------------------------------------------------------
   \cventry
-    {Senior Software Engineer} % Job title
-    {Mintel} % Organization
-    {London} % Location
-    {Since 2024} % Date(s)
+    {Senior Software Engineer}
+    {Mintel}
+    {London}
+    {January 2024 - Present}
     {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Designing and leading the development of a backend service for an AI-powered question-and-answer system.}
-        \item {This Retrieval-Augmented Generation service consolidated logic that previously lived in a frontend application and a thread-based Django server, to an asynchronous FastAPI server, significantly improving the system's load-handling capacity, decoupling the frontend from the backend, and facilitating the implementation of new features.}
-        \item {Addressing critical bottlenecks in data preparation and indexing, reducing processing time for ingesting our entire dataset from three to one hour, while improving the process robustness.}
+      \begin{cvitems}
+        \item {Collaborated within a 3-4 member engineering team to rapidly develop an AI-powered question-and-answer product in a six-week timeframe, achieving first-to-market status. This involved implementing a Retrieval-Augmented Generation (RAG) system built on an existing Django service, utilizing OpenAI GPT-4-Turbo, Milvus for vector search, Solr for access control, and S3 for content storage. Led the data indexing pipeline to read content from S3, enrich it with metadata, chunk it, generate embeddings, and index them in Milvus.}
+        \item {Led the design and development of a new backend service (using FastAPI, AsyncIO, and LangChain) to power the product, enabling rapid feature iteration and improved scalability. The design utilizes Server-Sent Events (SSE) to stream typed JSON objects to the client, including citations, images, and other data beyond the answer text. It is backed by MariaDB for conversation storage and retrieval.}
+        \item {Optimized the service's performance, achieving a 6x throughput increase by replacing the LangChain Expression Language with a native AsyncIO solution and \href{https://leverstone.me/blog/performance-profiling-in-python-tools-techniques-and-an-unexpected-culprit}{addressing a performance bottleneck in the OpenTelemetry OpenAI instrumentation library}. This optimization allowed for a 7x increase in user base without additional infrastructure resources.}
+        \item {Initiated and led an innovation workshop that brought together diverse perspectives from across the company. The top-voted project from the workshop progressed to the product roadmap with support from Product Development and UX teams, demonstrating my ability to bridge technical possibilities with business opportunities.}
+        \item {Investigated vector databases to recommend and lead a migration from Milvus to Solr, resulting in a >50\% reduction in cloud infrastructure costs while maintaining performance benchmarks.}
+        \item {Optimized the indexing pipeline, reducing processing time from three hours to under ten minutes by processing only the daily difference instead of the entire dataset. This improvement enabled a shift from weekly to daily data updates, providing users with more up-to-date market intelligence.}
+        \item {Led the development and implementation of a comprehensive quality evaluation suite for AI-powered features, including answer relevancy, a \href{https://leverstone.me/blog/automating-groundedness-evaluation-in-rag-applications}{custom groundedness metric}, and traditional search relevancy metrics (Mean Average Precision and Normalized Discounted Cumulative Gains). This suite incorporated LLM-as-a-Judge techniques, using OpenAI GPT-4o, to automate the evaluation process and provide data-driven insights for continuous improvement, informing prompt engineering, model updates, content retrieval adjustments (e.g., reranking), and more.}
+        \item {Enhanced system observability by integrating OpenTelemetry, Jaeger, and Sentry.}
+        \item {\href{https://leverstone.me/blog/mentoring-toolkit}{Mentored} two junior software engineers, focusing on their personal growth and career aspirations, while also advising on software design principles and best practices.}
       \end{cvitems}
     }
 
-%---------------------------------------------------------
   \cventry
-    {Software Engineer} % Job title
-    {Mintel} % Organization
-    {London} % Location
-    {2021 - 2023} % Date(s)
+    {Software Engineer}
+    {Mintel}
+    {London}
+    {August 2021 - December 2023}
     {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Working full-stack on a web app that allows clients to search and read content written by Mintel's market research analysts. Taking active part in all team activities of an established Scrum team.}
-        \item {Leading the development of a Single Page App for long-form content consumption written in React, including backend API development in Django.}
-        \item {Advocating for high code quality by improving the team documentation, test suites, and alerting system (Sentry).}
-        \item {Collaborating autonomously with adjacent teams, including contributing code to accelerate the development of features and bug fixes for the teams' dependencies.}
+      \begin{cvitems}
+        \item {Developed and maintained a full-stack web application using Django, React, and TypeScript.}
+        \item {Actively participated in all aspects of the Agile Scrum process, including sprint planning, daily stand-ups, sprint reviews, and retrospectives.}
+        \item {Led the development of a Single Page Application (SPA) using React and TypeScript for consuming long-form content, including the design and implementation of backend APIs using Django.}
+        \item {Improved code quality and team efficiency by enhancing documentation, improving testing (e.g., advocating for more idiomatic use of pytest), and refining the alerting system (Sentry).}
+        \item {Collaborated effectively with adjacent teams, contributing code to accelerate feature development and resolve bugs in shared dependencies. This involved attending cross-team meetings and contributing to shared code repositories.}
       \end{cvitems}
     }
 
-%---------------------------------------------------------
   \cventry
-    {Full-stack Developer} % Job title
-    {Queen Mary University of London} % Organization
-    {London} % Location
-    {2020 - 2021} % Date(s)
+    {Python Back-end Developer}
+    {XtremIO}
+    {Israel}
+    {July 2014 - September 2016}
     {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Migrating the wordpress website of the Media and Arts Technology centre to Gatsby.js, hosted on GitHub pages, with continuous delivery by travis-ci.}
+      \begin{cvitems}
+        \item {Developed and maintained the management server for an enterprise storage array, focusing on automated maintenance procedures such as system upgrades, hardware replacements, restores, and migrations.}
+        \item {Designed and implemented reactive command-line UI components that reduced operational errors by guiding users through complex operations with a clear and intuitive UI. These included progress bars with stage information, pushed from the backend, and utilities for initiating prompts from the backend.}
       \end{cvitems}
     }
 
-%---------------------------------------------------------
-  \cventry
-    {Python Back-end Developer} % Job title
-    {XtremIO} % Organization
-    {Israel} % Location
-    {2014 - 2016} % Date(s)
-    {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Working on the management server of an enterprise storage array.}
-        \item {Developing automated maintenance procedures such as system upgrades, hardware replacements, restores, migrations, etc.}
-        \item {Designing and implementing high-level and interactive protocols for client-server communication.}
-      \end{cvitems}
-    }
-
-%---------------------------------------------------------
-  \cventry
-    {Python and Django tutor} % Job title
-    {Freelance and with Udi Oron} % Organization
-    {Israel} % Location
-    {2014} % Date(s)
-    {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Teaching programmers in tech companies and privately.}
-        \item {Developing teaching materials as well as teaching and assisting in class.}
-      \end{cvitems}
-    }
-
-%---------------------------------------------------------
-  \cventry
-    {Full-stack Developer} % Job title
-    {Shachar Web Solutions} % Organization
-    {Israel} % Location
-    {2014} % Date(s)
-    {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Developing an enterprise resource planning system with Django and jQuery.}
-      \end{cvitems}
-    }
-
-%---------------------------------------------------------
-  \cventry
-    {Math tutor} % Job title
-    {Freelance and at HighQ retake college} % Organization
-    {Israel} % Location
-    {2009 - 2013} % Date(s)
-    {
-      \begin{cvitems} % Description(s) of tasks/responsibilities
-        \item {Teaching mathematics to 7th-12th grade students including preparation for matriculation exams (Israeli equivalent to A level) both privately and at a retake college.}
-        \item {Teaching BSc students Linear Algebra, Calculus, Discrete Mathematics, Probability, Statistics and more at undergraduate level.}
-      \end{cvitems}
-    }
-
-%---------------------------------------------------------
 \end{cventries}
 
 %-------------------------------------------------------------------------------
-%	SECTION TITLE
-%-------------------------------------------------------------------------------
+
 \cvsection{Education}
 
-%-------------------------------------------------------------------------------
-%	CONTENT
-%-------------------------------------------------------------------------------
 \begin{cventries}
 
-%---------------------------------------------------------
   \cventry
-    {PhD in Computer Science} % Degree
-    {Queen Mary University of London} % Institution
-    {London} % Location
-    {2016 - 2021} % Date(s)
+    {PhD in Computer Science}
+    {Queen Mary University of London}
+    {London}
+    {September 2016 - August 2021}
     {
-      \begin{cvitems} % Description(s) bullet points
-        \item {\textbf{Thesis title:} Head movement in conversation}
-        \item {\textbf{Supervisors:} Prof. Patrick Healey and Dr. Julian Hough}
-        \item {This PhD explores the function and form of head movement and specifically head nods in free conversation.}
-        \item {It utilizes virtual reality and motion capture data analysis to explore listeners non-verbal cues in multiparty social interactions.}
-        \item {Overall, this thesis questions the coherence of our intuitive notion of a head nod and the adequacy of current approaches to describe the movements involved.}
-        \item {It shows how some of the common theories that describe head movement and nods fail to explain most head movement in free conversation.}
-        \item {In addition, it highlights subtleties in head movement and nods that are often overlooked.}
-        \item {\textbf{Activities:}}
-        \item {Designing and running software skills workshops: Intro to Code with Python/Processing, Data Analysis with Python and Pandas, and Version Control with Git.}
-        \item {Teaching assistance for ``Interactive Digital Multimedia Techniques'', ``Parallel Computing'', and ``Arts Application Programming'' modules.}
-        \item {Organising the Virtual Reality Special Interest Group.}
+      \begin{cvitems}
+        \item {\textbf{Thesis:} Head Movement in Conversation. Supervised by Prof. Patrick Healey and Dr. Julian Hough.}
+        \item {Designed and ran software skills workshops: Intro to Code with Python/Processing, Data Analysis with Python and Pandas, and Version Control with Git.}
+        \item {Served as a teaching assistant for ``Interactive Digital Multimedia Techniques'', ``Parallel Computing'', and ``Arts Application Programming'' modules.}
+        \item {Organised the Virtual Reality Special Interest Group.}
       \end{cvitems}
     }
 
-%---------------------------------------------------------
   \cventry
-    {MA in Music Technology} % Degree
-    {Bar-Ilan University} % Institution
-    {Israel} % Location
-    {2011 - 2015} % Date(s)
+    {MA in Music Technology}
+    {Bar-Ilan University}
+    {Israel}
+    {2011 - 2015}
     {
-      \begin{cvitems} % Description(s) bullet points
-        \item {\textit{Exceptional distinction (97\%)}}
-        \item {\textbf{Thesis title:} An Audio-Only Augmented Reality System for Social Interaction}
-        \item {\textbf{Supervisors:} Prof. Eitan Avitsur and Dr. Nori Jacoby.}
-        \item {This thesis examines how an interactive environment might facilitate social interaction by developing and evaluating a mobile app for joint music consumption by a group of users in the same place and time.}
-        \item {The app measure relative distances from a set of beacons via Bluetooth, and generates an immersive personalised musical environment that depends on the location of its participants.}
-        \item {Two experiments tested the system in the context of a silent disco party, using the system's relative position signals as well as video tracking to evaluate the experience of users.}
-        \item {The results showed that the system promoted openness and increased the social interaction between users.}
-        \item {\textbf{Activities:}}
-        \item {Organising the weekly seminars of the Music Technology programme.}
+      \begin{cvitems}
+        \item {\textbf{Thesis:} An Audio-Only Augmented Reality System for Social Interaction. Supervised by Prof. Eitan Avitsur and Dr. Nori Jacoby.}
+        \item {Achieved exceptional distinction.}
       \end{cvitems}
     }
 
-%---------------------------------------------------------
   \cventry
-    {BSc in Mathematics and Music} % Degree
-    {Haifa University} % Institution
-    {Israel} % Location
-    {2006 - 2011} % Date(s)
+    {BSc in Mathematics and Music}
+    {Haifa University}
+    {Israel}
+    {2006 - 2011}
     {
-      \begin{cvitems} % Description(s) bullet points
-        \item {\textbf{Activities:}}
-        \item {Participating in the excellence programme of the department of mathematics.}
-        \item {Taking part in establishing and maintaining the computer lab of the music department.}
-        \item {Working as a recording and mixing engineer in the music department recording studio.}
+      \begin{cvitems}
+        \item {Participated in the excellence programme of the Department of Mathematics.}
       \end{cvitems}
     }
 
-%---------------------------------------------------------
 \end{cventries}
 
 %-------------------------------------------------------------------------------
+
 \end{document}
