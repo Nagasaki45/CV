@@ -1,7 +1,5 @@
-## My CV source, written in LaTeX, using the friggeri template
+## My CV
+
+Written in LaTeX, based on [Awesome-CV](https://github.com/posquit0/Awesome-CV).
 
 Build it with `xelatex cv.tex`.
-
-Here is how it should look like:
-
-![demo](/screenshot.png?raw=true "Template demo")
