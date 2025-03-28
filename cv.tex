@@ -37,7 +37,7 @@
 % \definecolor{lighttext}{HTML}{999999}
 
 % Set false if you don't want to highlight section with awesome color
-\setbool{acvSectionColorHighlight}{true}
+\setbool{acvSectionColorHighlight}{false}
 
 % If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
@@ -90,7 +90,7 @@
 \cvsection{Summary}
 
 \begin{cvparagraph}
-  I'm a Senior Software Engineer eager to make a significant impact and seeking my next challenge, ideally in a role where I can grow as a technical leader. I've consistently developed and implemented strategic solutions aligned with business objectives, from launching an AI-powered Q\&A product in weeks to improving system performance and reducing cloud costs. I thrive in environments where I can own projects from inception to completion, collaborate across teams, and delight users. I'm excited to find a role that supports work-life balance, offers opportunities to mentor others, and values expanding my technical breadth through hands-on contribution.
+  I'm a Senior Software Engineer seeking my next challenge where I can leverage my technical and leadership skills to deliver high-impact outcomes. I've consistently developed and delivered strategic solutions aligned with business objectives, from launching an AI-powered Q\&A product in weeks to improving system performance and reducing cloud costs. I thrive in environments where I can own projects from inception to completion, collaborate across teams, and delight users. I'm excited to find a role that offers opportunities to mentor others and encourages broadening my technical skills through hands-on work.
 \end{cvparagraph}
 
 %-------------------------------------------------------------------------------
@@ -105,7 +105,7 @@
 
   \cvskill
     {Backend}
-    {FastAPI, Django, Flask}
+    {FastAPI, Django}
 
   \cvskill
     {Frontend}
@@ -117,7 +117,7 @@
 
   \cvskill
     {Databases}
-    {MariaDB, Solr, Milvus}
+    {MariaDB, Apache Solr, Milvus}
 
   \cvskill
     {Cloud}
@@ -142,32 +142,34 @@
   \cventry
     {Senior Software Engineer}
     {Mintel}
-    {London}
     {January 2024 - Present}
+    {London}
     {
       \begin{cvitems}
-        \item {Collaborated within a 3-4 member engineering team to rapidly develop an AI-powered question-and-answer product in a six-week timeframe, achieving first-to-market status. This involved implementing a Retrieval-Augmented Generation (RAG) system built on an existing Django service, utilizing OpenAI GPT-4-Turbo, Milvus for vector search, Solr for access control, and S3 for content storage. Led the data indexing pipeline development to read content from S3, enrich it with metadata, chunk it, generate embeddings, and index them in Milvus.}
-        \item {Led the design and development of a new backend service (using FastAPI, AsyncIO, and LangChain) to power the product, enabling rapid feature iteration and improved scalability. The design utilizes Server-Sent Events (SSE) to stream typed JSON objects to the client, including citations, images, and other data beyond the answer text. It is backed by MariaDB for conversation storage and retrieval.}
-        \item {Optimized the service's performance, achieving a 6x throughput increase by replacing the LangChain Expression Language with a native AsyncIO solution and \href{https://leverstone.me/blog/performance-profiling-in-python-tools-techniques-and-an-unexpected-culprit}{addressing a performance bottleneck in the OpenTelemetry OpenAI instrumentation library}. This optimization allowed for a 7x increase in user base without additional infrastructure resources.}
-        \item {Initiated and led an innovation workshop that brought together diverse perspectives from across the company. The top-voted project from the workshop progressed to the product roadmap with support from the Product Development and UX teams, demonstrating my ability to bridge technical possibilities with business opportunities.}
-        \item {Investigated vector databases to recommend and lead a migration from Milvus to Solr, resulting in a >50\% reduction in cloud infrastructure costs while maintaining performance benchmarks.}
-        \item {Optimized the indexing pipeline, reducing processing time from three hours to under ten minutes by processing only the daily difference instead of the entire dataset. This improvement enabled a shift from weekly to daily data updates, providing users with more up-to-date market intelligence.}
-        \item {Led the development and implementation of a comprehensive quality evaluation suite for AI-powered features, including answer relevancy, a \href{https://leverstone.me/blog/automating-groundedness-evaluation-in-rag-applications}{custom groundedness metric}, and traditional information retrieval metrics (Mean Average Precision and Normalized Discounted Cumulative Gains). This suite incorporated LLM-as-a-Judge techniques, using OpenAI GPT-4o, to automate the evaluation process and provide data-driven insights for continuous improvement, informing prompt engineering, model updates, content retrieval adjustments (e.g., reranking), and more.}
+        \item {Collaborated within an agile Scrum team to rapidly develop and launch an AI-powered question-and-answer product in a six-week timeframe, achieving first-to-market status.}
+        \item {Implemented a Retrieval-Augmented Generation (RAG) system on an existing Django service, using OpenAI GPT-4-Turbo, Milvus for vector search, Apache Solr for keyword search and access control, and S3 for storage.}
+        \item {Led the data indexing pipeline development to read content from S3, enrich with metadata, chunk, generate embeddings, and index into Milvus.}
+        \item {Led the design and development of a new backend service (using FastAPI, LangChain, and MariaDB) to enable rapid feature iteration and improved scalability. The design utilizes Server-Sent Events (SSE) to stream typed JSON objects, interleaving answer text, citations, media, and charts for informative and engaging interfaces.}
+        \item {Optimized the service performance, achieving 6x throughput increase by replacing LangChain Expression Language with native AsyncIO solution and \href{https://leverstone.me/blog/performance-profiling-in-python-tools-techniques-and-an-unexpected-culprit}{resolving a bottleneck}
+         in a 3rd-party open-source library, supporting a 7x user base increase without adding resources.}
+        \item {Initiated and led a cross-department innovation workshop; the top-voted project was added to the roadmap and delivered, demonstrating ability to bridge technical possibilities and business needs.}
+        \item {Investigated vector databases to recommend and lead a migration from Milvus to Solr, achieving >50\% reduction in cloud infrastructure costs while maintaining performance.}
+        \item {Optimized the indexing pipeline, cutting processing time from three hours to under ten minutes by processing only the daily difference. This enabled a shift to daily (vs. weekly) data updates, providing users with up-to-date information.}
+        \item {Led the development of an AI quality evaluation suite to measure answer relevancy, \href{https://leverstone.me/blog/automating-groundedness-evaluation-in-rag-applications}{groundedness}, and traditional information retrieval metrics; incorporating LLM-as-a-Judge (OpenAI GPT-4o) for automation; providing data-driven insights for continuous improvement like prompt engineering, model updates, and retrieval adjustments.}
         \item {Enhanced system observability by integrating OpenTelemetry, Jaeger, and Sentry.}
-        \item {\href{https://leverstone.me/blog/mentoring-toolkit}{Mentored} two junior software engineers, focusing on their personal growth and career aspirations, while also advising on software design principles and best practices.}
+        \item {\href{https://leverstone.me/blog/mentoring-toolkit}{Mentored} two junior software engineers, focusing on personal growth and career aspirations, while also advising on software design principles and best practices.}
       \end{cvitems}
     }
 
   \cventry
     {Software Engineer}
     {Mintel}
-    {London}
     {August 2021 - December 2023}
+    {London}
     {
       \begin{cvitems}
         \item {Developed and maintained a full-stack web application using Django, React, and TypeScript.}
-        \item {Actively participated in all aspects of the Agile Scrum process, including sprint planning, daily stand-ups, sprint reviews, and retrospectives.}
-        \item {Led the development of a Single Page Application (SPA) using React and TypeScript for consuming long-form content, including the design and implementation of backend APIs using Django.}
+        \item {Led the development of a TypeScript/React Single Page Application (SPA) for consuming media-rich long-form content, including the design and implementation of a Django backend API.}
         \item {Improved code quality and team efficiency by enhancing documentation, improving testing (e.g., advocating for more idiomatic use of pytest), and refining the alerting system (Sentry).}
         \item {Collaborated effectively with adjacent teams, contributing code to accelerate feature development and resolve bugs in shared dependencies. This involved attending cross-team meetings and contributing to shared code repositories.}
       \end{cvitems}
@@ -176,8 +178,8 @@
   \cventry
     {Python Back-end Developer}
     {XtremIO}
-    {Israel}
     {July 2014 - September 2016}
+    {Israel}
     {
       \begin{cvitems}
         \item {Developed and maintained the management server for an enterprise storage array, focusing on automated maintenance procedures such as system upgrades, hardware replacements, restores, and migrations.}
@@ -196,8 +198,8 @@
   \cventry
     {PhD in Computer Science}
     {Queen Mary University of London}
-    {London}
     {September 2016 - August 2021}
+    {London}
     {
       \begin{cvitems}
         \item {\textbf{Thesis:} Head Movement in Conversation. Supervised by Prof. Patrick Healey and Dr. Julian Hough.}
@@ -210,8 +212,8 @@
   \cventry
     {MA in Music Technology}
     {Bar-Ilan University}
-    {Israel}
     {2011 - 2015}
+    {Israel}
     {
       \begin{cvitems}
         \item {\textbf{Thesis:} An Audio-Only Augmented Reality System for Social Interaction. Supervised by Prof. Eitan Avitsur and Dr. Nori Jacoby.}
@@ -222,8 +224,8 @@
   \cventry
     {BSc in Mathematics and Music}
     {Haifa University}
-    {Israel}
     {2006 - 2011}
+    {Israel}
     {
       \begin{cvitems}
         \item {Participated in the excellence programme of the Department of Mathematics.}
@@ -231,6 +233,20 @@
     }
 
 \end{cventries}
+
+%-------------------------------------------------------------------------------
+
+\cvsection{Activities and Interests}
+
+\begin{cvparagraph}
+  \begin{cvitems}
+    \item {I maintain a technical blog and personal website on \href{https://leverstone.me}{leverstone.me}, covering practical software techniques, AI explorations, tech book reviews, tutorials, and personal projects.}
+    \item {I run a technical book club over a mailing list on \href{https://groups.io/g/tech-book-club}{groups.io/g/tech-book-club}, where we read and discuss books on software engineering and technology to improve our technical skills.}
+    \item {I run a monthly board games night at my current workplace. If you don't have one yet, I can help you set one up!}
+    \item {I raise two young children who I adore for their curiosity and joy.}
+    \item {In the remaining spare time I'm collecting and maintaining \href{https://leverstone.me/hobbies}{hobbies}: bouldering, cycling, playing board games, and playing bass guitar and electronic music.}
+  \end{cvitems}
+\end{cvparagraph}
 
 %-------------------------------------------------------------------------------
 
